@@ -1,10 +1,4 @@
-interface DeleteModalProps {
-    isOpen: boolean;
-    onClose: () => void;
-    onConfirm: () => void;
-}
-
-function DeleteModal({ isOpen, onClose, onConfirm }: DeleteModalProps) {
+function DeleteModal({ isOpen, onClose, onConfirm }) {
     if (!isOpen) return null;
 
     return (

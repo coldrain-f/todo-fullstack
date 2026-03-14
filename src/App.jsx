@@ -1,5 +1,5 @@
 import { useState } from "react";
-import DeleteModal from "./components/DeleteModal";
+import DeleteModal from "./components/TodoDeleteModal";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
