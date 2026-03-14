@@ -1,6 +1,15 @@
+import { useState } from "react";
+import TodoDeleteModal from "./TodoDeleteModal";
+
 function TodoList() {
+    const [isModalOpen, setIsModalOpen] = useState(false);
     return (
         <>
+            <TodoDeleteModal
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                onConfirm={() => setIsModalOpen(false)}
+            />
             <div className="flex flex-col">
                 {/* Active Item - High Priority */}
                 <div className="group flex items-center justify-between gap-4 px-8 py-4 hover:bg-gray-50 border-b border-gray-100 transition-colors">
