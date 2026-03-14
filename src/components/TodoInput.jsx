@@ -18,12 +18,9 @@ function TodoInput() {
                         placeholder="Add a new task..."
                         value={task}
                         onChange={(e) => setTask(e.target.value)}
-                        onKeyDown={(e) => {
-                            if (e.code === "Enter") {
-                                handleAddTask();
-                            }
-                        }}
+                        onKeyDown={(e) => e.code === "Enter" && handleAddTask()}
                     />
+
                     <div className="relative w-[110px] shrink-0">
                         <select className="w-full h-full appearance-none bg-[#f8f9fc] border border-[#ced8e8] rounded-xl pl-4 pr-8 py-3.5 text-[14px] font-semibold text-[#0d131c] focus:outline-none focus:ring-2 focus:ring-[#3c83f6]/20 focus:border-[#3c83f6] transition-all shadow-sm cursor-pointer"
                             value={priority}
@@ -37,6 +34,7 @@ function TodoInput() {
                             <span className="material-symbols-outlined text-gray-400 text-[20px]">expand_more</span>
                         </div>
                     </div>
+
                     <button className="flex items-center justify-center h-[52px] w-[52px] bg-[#3c83f6] hover:bg-blue-600 text-white rounded-xl transition-colors shadow-sm active:scale-95 shrink-0"
                         onClick={handleAddTask}
                     >
